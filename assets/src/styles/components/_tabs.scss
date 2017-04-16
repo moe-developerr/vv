@@ -1,0 +1,12 @@
+.tab {
+	@extend .display--ib;
+	@extend .p--l1;
+	@extend .p--r1;
+	@extend .display--ib;
+	min-width: 160px;
+
+	&-wrapper {
+		@extend .display--ib;
+		margin-bottom: 5px;
+	}
+}

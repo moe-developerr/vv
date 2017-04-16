@@ -1,0 +1,61 @@
+.panel {
+	border-radius: 0;
+	margin-bottom: 0;
+	
+	@include m('diamond') {
+		@extend .col-xs-12;
+		@extend .col-md-8;
+		@extend .col-md-offset-2;
+		@extend .col-lg-6;
+		@extend .col-lg-offset-3;
+		margin-top: -150px;
+		margin-bottom: 200px;
+		border: none;
+
+		.diamond { max-width: 370px; }
+
+		.panel-body,
+		.panel-footer {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			line-height: 1.8;
+		}
+		@include e('link') {
+			@include text-line-hover(32, 20);
+			@include center-vertically();
+			display: block;
+			min-height: 75px;
+			
+			@include respond-to('xs') {
+				border-top: 1px solid;
+				margin-top: 15px;
+			}
+			@include respond-to('sm-p') {
+				border-#{$left}: 1px solid;
+				text-align: center;
+			}
+
+			.line { @include line(45, 1); }
+			.rhombus-1 { @include rhombus(20, 9); }
+			.rhombus-2 { @include rhombus(32, 9); }
+		}
+		@include e('link-text') { margin: 0; }
+	}
+
+	@include m('card') {
+		max-width: 300px;
+		margin-bottom: 100px;
+		.panel-heading {
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.diamond-panel-wrapper {
+	@extend .clearfix;
+	&:last-of-type {
+		.panel--diamond { margin-bottom: 100px; }
+	}
+}

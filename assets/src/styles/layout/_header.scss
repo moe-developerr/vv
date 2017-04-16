@@ -1,0 +1,48 @@
+.header-placeholder {
+	display: block;
+	height: 140px;
+}
+
+.header {
+	@extend .z-index--primary;
+	height: 140px;
+	position: fixed;
+	#{$left}: 0;
+	top: 0;
+	text-align: center;
+	transition: all $slow-t;
+
+	@include respond-to('xs') { #{$right}: 0; }
+	@include respond-to('sm-p') { #{$right}: 50px; }
+	@include m('sticky') {
+		height: 70px;
+		.logo { transform: none; }
+		.logo { margin-top: 20px; }
+		@include respond-to('sm-p') {
+			.logo { max-width: 150px; }
+		}
+	}
+
+	@include e('vivienda') {
+		@include respond-to('xs') { display: none; }
+		@include respond-to('sm-p') {
+			@include center-vertically();
+			float: $left;
+			height: 100%;
+			transform: if-ltr(translateX(100px), translateX(-100px));
+			&-image { display: inline-block; max-width: 100px; }
+		}
+		.homepage & { display: none; }
+	}
+}
+
+.logo {
+	@extend .shift--down-half;
+	display: inline-block;
+	position: relative;
+	z-index: 50;
+	max-width: 212px;
+	transition: all $slow-t;
+	@include respond-to('xs') { max-width: 150px; margin-top: 46px; }
+	@include respond-to('sm-p') { .homepage & { margin-#{$left}: 50px; } }
+}

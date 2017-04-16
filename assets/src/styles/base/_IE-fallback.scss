@@ -1,0 +1,112 @@
+@media screen and (min-width:0\0) {  
+  /* IE9 and IE10 */
+	.menu__close,
+	.booking__close { padding-top: 12px; }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	/* IE 10 */
+	@-ms-viewport { width: auto; } // fix scrollbar
+}
+.ie9 {
+
+}
+.lt-ie9 {
+	.center--vertically-cols .img-responsive { width: 100%; }
+	.newsletter {
+		@include e('image') {
+			img { margin-top: -25px; }
+		}
+		@include e('submit') {
+			margin: 0;
+			&:before,&:after { display: none; }
+		}
+	}
+	.page-title-row {
+		& > * { margin-top: -22px; }
+		&.abs {
+			#{$left}: 50%;
+			margin-#{$left}: -200px;
+		}
+	}
+	.logo {
+		@include respond-to('xs') { margin-top: 92px; }
+		@include respond-to('sm-p') { margin-top: 65px; }
+	}
+	.menu {
+		@include e('open-wrapper') {
+			@include respond-to('xs') { margin-#{$right}: 15px; }
+			@include respond-to('sm-p') { margin-#{$right}: 50px; }
+		}
+		@include e('open-wrapper') { .close-btn { #{$right}: 12px; } }
+	}
+	.booking {
+		&__open,
+		&__close {
+			@include respond-to('sm-p') {
+				&-text {
+					font-size: 8px;
+					padding-#{$left}: 8px;
+				}
+			}
+		}
+		@include e('open-wrapper') {
+			@include respond-to('xs') { margin-#{$left}: 15px; }
+			.close-btn {
+				@include respond-to('sm-p') { display: none; }
+			}
+		}
+		@include e('open') {
+			@include respond-to('sm-p') { display: none;}
+		}
+		@include e('open-wrapper') { .close-btn { #{$left}: 12px; } }
+	}
+	.image-to-text,
+	.text-to-image {
+		@include e('overlay') {
+			filter: alpha(opacity=50);
+			&:hover { filter: alpha(opacity=0); }
+		}
+		@include e('title') { .line { display: none; } }
+	}
+	.diamond {
+		&:before,
+		&:after { display: none; }
+	}
+	.diamond {
+		@include m('lg') { display: block; margin-left: auto; margin-right: auto; }
+
+		@include respond-to('xs') {
+			@include e('image') { margin-left: auto; margin-right: auto; }
+		}
+		@include respond-to('sm-p') {
+			@include e('image') { margin-#{$right}: 0; margin-#{$left}: auto; }
+		}
+	}
+	.header {
+		@include m('sticky') {
+			@include respond-to('sm-p') {
+				.logo { margin-top: 0; }
+			}
+		}
+		@include e('vivienda') {
+			@include respond-to('sm-p') { margin-#{$left}: 50px; }
+		}
+	}
+	.menu__close,
+	.booking__close { display: none; }
+	.menu__open + .close-btn,
+	.booking__open + .close-btn { display: none; }
+	.menu__open-wrapper,
+	.booking__open-wrapper {
+		.close-btn {
+			@extend .tlc--c;
+			cursor: pointer;
+			position: relative;
+			top: 10px;
+			z-index: 101;
+			font-size:60px;
+			line-height: .5;
+		}
+	}
+	.center--vertically-cols { padding-top: 30px; }
+}

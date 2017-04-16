@@ -1,0 +1,27 @@
+.csstransitions {
+	.booking {
+		transform: if-ltr(translateX(100%), translateX(-100%));
+		transition: transform $slow-t;
+		&.active { transform: translateX(0); }
+	}
+	.menu {
+		transform: if-ltr(translateX(100%), translateX(-100%));
+		transition: transform $slow-t, padding $slow-t;
+		&.active { transform: translateX(0); }
+		@include e('link') { transition: color $fast-t; }
+	}
+	.slider {
+		.rsArrowIcn {
+			transition: opacity $fast-t;
+		}
+	}
+	[data-aos] { opacity: 0; }
+	[data-aos].animated { opacity: 1; }
+}
+
+.no-csstransitions {
+	.booking,
+	.menu {
+		opacity: 0;
+	}
+}

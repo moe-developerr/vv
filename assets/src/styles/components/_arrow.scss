@@ -1,0 +1,19 @@
+.arrow {
+	&:before,
+	&:after {
+		@include line(20, 2);
+		content: '';
+		position: absolute;
+	}
+
+	@include m('bot') {
+		&:before,
+		&:after {
+			top: 100%;
+			left: 50%;
+			margin-top: 15px;
+		}
+		&:before { transform: rotate(-45deg) translate(-50%, -1px); }
+		&:after { transform: rotate(45deg) translate(-50%, 19px); }
+	}
+}

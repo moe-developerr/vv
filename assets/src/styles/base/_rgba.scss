@@ -1,0 +1,8 @@
+.no-rgba {
+	.overlay {
+		@include m('plc') {
+			@extend .plc--bg;
+			filter: alpha(opacity=$low-opacity*100)
+		}
+	}
+}

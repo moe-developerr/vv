@@ -1,0 +1,86 @@
+.newsletter {
+	@extend .container-fluid;
+	@extend .text-center;
+	padding-bottom: $lg-padding/2;
+	
+	@include e('image') {
+		position: relative;
+		@extend .z-index--secondary;
+	}
+	body.homepage & {
+		padding-top: $lg-padding/2;
+		@include e('image') { display: none; }
+	}
+	@include respond-to('upto-sm') {
+		padding-left: $sm-padding;
+		padding-right: $sm-padding;
+	}
+	@include respond-to('md-p') {
+		padding-left: $lg-padding;
+		padding-right: $lg-padding;
+	}
+	@include e('form') {
+		margin-top: 20px;
+	}
+	@include e('col') {
+		position: relative;
+		height: 50px;
+		@include respond-to('xs') {
+			max-width: 230px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 15px;
+		}
+		@include respond-to('sm-p') {
+			display: inline-block; 
+			vertical-align: middle;
+			margin-#{$right}: 30px;
+		}
+	}
+	@include e('input') {
+		@extend .normalize--input;
+		@extend .small;
+		border-bottom: 1px solid;
+		font-style: italic;
+		height: 24px;
+		font-family: $body-ff-thin;
+		margin-#{$right}: 100px;
+		&:focus {
+			& ~ .input--rhombus-2 { #{$right}: 20px; }
+			& ~ .input--rhombus-1 { #{$right}: 35px; }
+		}
+	}
+	@include e('submit') {
+		border-radius: 50%;
+		padding: 15px;
+		border: 1px solid;
+		position: relative;
+		margin-top: 8px;
+		transition: all $fast-t;
+		&:before,
+		&:after {
+			content: '';
+			height: 1px;
+			width: 10px;
+			position: absolute;
+			transition: all $fast-t;
+			#{$left}: 10px;
+		}
+		&:before {
+			transform: if-ltr(rotate(45deg), rotate(-45deg));
+			top: 11px;
+		}
+		&:after {
+			transform: if-ltr(rotate(-45deg), rotate(45deg));
+			top: 18px;
+		}
+	}
+	@include e('response') {
+		@extend .clearfix;
+		display: none;
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		&.active { display: block; }
+	}
+}

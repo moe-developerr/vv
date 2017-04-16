@@ -1,0 +1,60 @@
+.diamond {
+	display: inline-block;
+	position: relative;
+
+	@include m('sm') {
+		max-width: 280px;
+		&:hover {
+			.overlay { opacity: 0; }
+		}
+	}
+	@include m('lg') { max-width: 500px; }
+
+  @include m('pull-left') { margin-#{$left}: -57px; }
+	@include m('pull-top') { margin-top: -57px; }
+  @include m('pull-bot') {
+  	@include respond-to('xs') { margin-bottom: 57px; }
+  	@include respond-to('sm-p') { margin-bottom: -57px; }
+  }
+  
+  @include e('image') { @extend .img-responsive; width: 100%; }
+
+	@include m('arrow') {
+		&:before,
+		&:after {
+			content: '';
+			@include line(120);
+			position: absolute;
+		}
+		&-left {
+			&:before,
+			&:after { #{$left}: 0; top: 50%; }	
+			&:after { transform: if-ltr(rotate(-45deg), rotate(45deg)) translate(0px, -60px); }
+			&:before { transform: if-ltr(rotate(-135deg), rotate(135deg)) translate(0px, -60px); }
+		}
+		&-right {
+			&:before,
+			&:after { #{$right}: 0; top: 50%; }	
+			&:after { transform: if-ltr(rotate(45deg) translate(-2px, -58px), rotate(-45deg) translate(2px, -58px)); }
+			&:before { transform: if-ltr(rotate(-45deg) translate(2px, 58px), rotate(45deg) translate(2px, 58px)); }
+		}
+		&-top {
+			&:before,
+			&:after { left: 50%; }	
+			&:after { transform: rotate(45deg) translate(-80px, 65px); }
+			&:before { transform: rotate(-45deg) translate(-5px, -20px); top: 100%; }
+		}
+		&-bot {
+			&:before,
+			&:after { left: 50%; }	
+			&:after { transform: rotate(45deg) translate(-80px, 65px); }
+			&:before { transform: rotate(-45deg) translate(-5px, -20px); top: 100%; }
+		}
+	}
+	
+	&-wrapper {
+		@extend .col-sm-6;
+		@include respond-to('xs') { text-align: center; }
+		@include respond-to('sm-p') { text-align: #{$right}; margin-bottom: 90px; }
+	}
+}

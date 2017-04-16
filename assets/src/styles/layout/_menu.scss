@@ -1,0 +1,65 @@
+.menu {
+	@extend .z-index--primary;
+	@extend .text-left;
+	position: fixed;
+	#{$right}: 0;
+	top: 0;
+	height: 100%;
+	overflow-y: auto;
+	
+	@include respond-to('xs') { padding: $lg-padding/2; }
+	@include respond-to('sm-p') { padding: $lg-padding/2 $lg-padding; }
+
+	.header--sticky & {
+		@include respond-to('xs') { padding: $sm-padding $lg-padding/2; }
+		@include respond-to('sm-p') { padding: $sm-padding $lg-padding; }
+	}
+	
+	@include e('open-wrapper') {
+		@extend .pull-right;
+		@extend .center--vertically;
+		height: 100%;
+		position: relative;
+		@include respond-to('xs') { transform: if-ltr(translateX(-$sm-padding), translateX($sm-padding)); }
+		@include respond-to('sm-p') { transform: if-ltr(translateX(-$lg-padding/2), translateX($lg-padding/2)); }
+	}
+	@include e('open') { @include hamburger-btn(); }
+	@include e('list') { 
+		@extend .list-unstyled;
+		margin-top: 80px;
+	}
+	@include e('item') { margin-bottom: 40px;	}
+	@include e('close') {
+		@include close-btn();
+		.line:nth-of-type(2) { display: none; }
+	}
+}
+
+.languages {
+	list-style-type: none;
+	padding-#{$left}: 0;
+	margin-bottom: 0;
+	margin-#{$left}: -5px;
+	height: 42px;
+	@include e('item') {
+		@extend .pull-left;
+		@extend .center--vertically;
+		height: 100%;
+		&:first-child {
+			margin-#{$right}: 20px;
+		}
+	}
+	@include e('link') {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 10px 5px;
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+		opacity: $low-opacity;
+		transition: all $fast-t;
+		&:hover,
+		&.active {
+			opacity: 1;
+		}
+	}
+}

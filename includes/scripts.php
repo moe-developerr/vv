@@ -1,0 +1,1 @@
+<script src="assets/dist/scripts/main.min.js"></script>

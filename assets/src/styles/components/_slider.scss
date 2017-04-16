@@ -1,0 +1,85 @@
+.slider {
+  .homepage & { min-height: 400px; }
+  .rsNav.rsBullets { display: none; }
+  &.with-bullets.with-bullets-right .rsNav.rsBullets {
+    transform-origin: right;
+    left: auto;
+    right: 0;
+  }
+  &.with-bullets .rsNav.rsBullets {
+    display: block;
+    background: transparent;
+    top: 50%;
+    bottom: auto;
+    transform: rotate(90deg);
+    transform-origin: 0;
+    width: auto;
+    padding-right: 7px;
+    .rsBullet {
+      padding: 2px 5px 6px;
+      &.rsNavSelected span {
+        background: $t-l-c;
+      }
+      span {
+        border-radius: 0;
+        transform: rotate(45deg);
+        border: 1px solid $t-l-c;
+      }
+    }
+  }
+  @include respond-to('xs') {
+    &.with-bullets .rsNav.rsBullets {
+      bottom: -6px;
+      transform: none;
+      top: auto;
+      width: 100%;
+    }
+  }
+  .rsArrowIcn {
+  	transform: rotate(45deg);
+   border-radius: 0;
+   background-image: none;
+   opacity: 0.9;
+   &:hover { opacity: 1; }
+   &:before,
+   &:after {
+     content: '';
+     @include line(16, 2);
+     position: absolute;
+   }
+ }
+ .rsArrow {
+   width: 80px;
+   &.rsArrowLeft .rsArrowIcn {
+    &:before {
+     left: 8px;
+     top: 24px;
+   }
+   &:after {
+    left: 1px;
+    top: 16px;
+    transform: rotate(-90deg);
+  }
+}
+&.rsArrowRight .rsArrowIcn {
+  &:before {
+   left: 9px;
+   top: 8px;
+ }
+ &:after {
+   left: 16px;
+   top: 15px;
+   transform: rotate(-90deg);
+ }
+}
+}
+@include respond-to('xs') {
+  @include m('short') { height: 300px; }
+  @include m('tall') { height: 350px; }
+}
+@include respond-to('sm-p') {
+  @include m('short') { height: 400px; }
+  @include m('tall') { height: 550px; }
+}
+@include m('no-arrows') { .rsArrow { display: none !important; } }
+}

@@ -1,0 +1,562 @@
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-15 {
+  width: 20% !important;
+  float: left;
+}
+@include respond-to('sm-p') {
+	.col-sm-15 {
+  	width: 20% !important;
+	  float: left;
+  }
+}
+@include respond-to('md-p') {
+	.col-md-15 {
+  	width: 20% !important;
+  	float: left;
+	}
+}
+@include respond-to('lg') {
+  .col-lg-15 {
+  	width: 20% !important;
+  	float: left;
+	}
+}
+.fw {
+  &-700 { font-weight: 700; }
+}
+.ff {
+  @include m('body-thin') { font-family: $body-ff-thin; }
+  @include m('body-thick') { font-family: $body-ff-thick; }
+}
+.nm {
+  @include m('t1') { margin-top: -15px; }
+  @include m('t2') { margin-top: -30px; }
+  @include m('t3') {
+    margin-top: -45px;
+    @include respond-to('xs') {
+      &-xs { margin-top: -45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: -45px; }
+    }
+  }
+  @include m('t4') { margin-top: -60px; }
+  @include m('t5') { margin-top: -75px; }
+  @include m('t6') {
+    margin-top: -90px;
+    @include respond-to('xs') {
+      &-xs { margin-top: -90px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: -90px; }
+    }  
+  }
+  @include m('t8') {
+    margin-top: -120px;
+    @include respond-to('xs') {
+      &-xs { margin-top: -120px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: -120px; }
+    }  
+  }
+  @include m('l1') { margin-#{$left}: -15px; }
+  @include m('l2') { margin-#{$left}: -30px; }
+  @include m('l3') {
+    margin-#{$left}: -45px;
+    @include respond-to('xs') {
+      &-xs { margin-#{$left}: -45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-#{$left}: -45px; }
+    }
+  }
+  @include m('l4') { margin-#{$left}: -60px; }
+  @include m('l5') { margin-#{$left}: -75px; }
+  @include m('l6') { margin-#{$left}: -90px; }
+  @include m('r1') { margin-#{$right}: -15px; }
+  @include m('r2') { margin-#{$right}: -30px; }
+  @include m('r3') {
+    margin-#{$right}: -45px;
+    @include respond-to('xs') {
+      &-xs { margin-#{$right}: -45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-#{$right}: -45px; }
+    }
+  }
+  @include m('r4') { margin-#{$right}: -60px; }
+  @include m('r5') { margin-#{$right}: -75px; }
+  @include m('r6') { margin-#{$right}: -90px; }
+}
+.m {
+  @include m('t1') {
+    margin-top: 15px;
+    @include respond-to('xs') {
+      &-xs { margin-top: 15px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: 15px; }
+    }
+  }
+  @include m('t2') { margin-top: 30px; }
+  @include m('t3') {
+    margin-top: 45px;
+    @include respond-to('xs') {
+      &-xs { margin-top: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: 45px; }
+    }
+  }
+  @include m('t4') { margin-top: 60px; }
+  @include m('t5') { margin-top: 75px; }
+  @include m('t6') {
+    margin-top: 90px;
+    @include respond-to('xs') {
+      &-xs { margin-top: 90px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: 90px; }
+    }
+  }
+  @include m('t8') {
+    margin-top: 120px;
+    @include respond-to('xs') {
+      &-xs { margin-top: 120px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: 120px; }
+    }
+  }
+  @include m('t9') {
+    margin-top: 135px;
+    @include respond-to('xs') {
+      &-xs { margin-top: 135px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: 135px; }
+    }
+  }
+  @include m('t19') {
+    margin-top: 285px;
+    @include respond-to('xs') {
+      &-xs { margin-top: 285px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: 285px; }
+    }
+  }
+  @include m('t20') {
+    margin-top: 300px;
+    @include respond-to('xs') {
+      &-xs { margin-top: 300px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-top: 300px; }
+    }
+  }
+  @include m('b1') { margin-bottom: 15px; }
+  @include m('b2') { margin-bottom: 30px; }
+  @include m('b3') {
+    margin-bottom: 45px;
+    @include respond-to('xs') {
+      &-xs { margin-bottom: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-bottom: 45px; }
+    }
+  }
+  @include m('b4') { margin-bottom: 60px; }
+  @include m('b5') { margin-bottom: 75px; }
+  @include m('b6') { margin-bottom: 90px; }
+  @include m('b7') { margin-bottom: 105px; }
+  @include m('b8') { margin-bottom: 120px; }
+  @include m('b9') { margin-bottom: 135px; }
+  @include m('b10') { margin-bottom: 150px; }
+  @include m('b11') { margin-bottom: 165px; }
+  @include m('b12') { margin-bottom: 180px; }
+  @include m('b13') { margin-bottom: 195px; }
+  @include m('b14') { margin-bottom: 210px; }
+  @include m('b15') { margin-bottom: 225px; }
+  @include m('b16') { margin-bottom: 240px; }
+  @include m('b17') { margin-bottom: 255px; }
+  @include m('b18') {
+    margin-bottom: 270px;
+    @include respond-to('xs') {
+      &-xs { margin-bottom: 270px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-bottom: 270px; }
+    }
+  }
+  @include m('b19') {
+    margin-bottom: 285px;
+    @include respond-to('xs') {
+      &-xs { margin-bottom: 285px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-bottom: 285px; }
+    }
+  }
+  @include m('b20') {
+    margin-bottom: 300px;
+    @include respond-to('xs') {
+      &-xs { margin-bottom: 300px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-bottom: 300px; }
+    }
+  }
+  @include m('r1') { margin-#{$right}: 15px; }
+  @include m('r2') { margin-#{$right}: 30px; }
+  @include m('r3') {
+    margin-#{$right}: 45px;
+    @include respond-to('xs') {
+      &-xs { margin-#{$right}: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-#{$right}: 45px; }
+    }
+  }
+  @include m('r4') { margin-#{$right}: 60px; }
+  @include m('r5') { margin-#{$right}: 75px; }
+  @include m('r6') {
+    margin-#{$right}: 90px;
+    @include respond-to('xs') {
+      &-xs { margin-#{$right}: 90px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-#{$right}: 90px; }
+    }
+  }
+  @include m('l1') { margin-#{$left}: 15px; }
+  @include m('l2') { margin-#{$left}: 30px; }
+  @include m('l3') {
+    margin-#{$left}: 45px;
+    @include respond-to('xs') {
+      &-xs { margin-#{$left}: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-#{$left}: 45px; }
+    }
+  }
+  @include m('l4') { margin-#{$left}: 60px; }
+  @include m('l5') { margin-#{$left}: 75px; }
+  @include m('l6') {
+    margin-#{$left}: 90px;
+    @include respond-to('xs') {
+      &-xs { margin-#{$left}: 90px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { margin-#{$left}: 90px; }
+    }
+  }
+}
+.p {
+  @include m('t1') { padding-top: 15px; }
+  @include m('t2') {
+    padding-top: 30px;
+    @include respond-to('xs') {
+      &-xs { padding-top: 30px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-top: 30px; }
+    }
+  }
+  @include m('t3') {
+    padding-top: 45px;
+    @include respond-to('xs') {
+      &-xs { padding-top: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-top: 45px; }
+    }
+  }
+  @include m('t4') { padding-top: 60px; }
+  @include m('t5') {
+    padding-top: 75px;
+    @include respond-to('xs') {
+      &-xs { padding-top: 75px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-top: 75px; }
+    }
+  }
+  @include m('t6') { padding-top: 90px; }
+  @include m('b1') { padding-bottom: 15px; }
+  @include m('b2') {
+    padding-bottom: 30px;
+    @include respond-to('xs') {
+      &-xs { padding-bottom: 30px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-bottom: 30px; }
+    }
+  }
+  @include m('b3') {
+    padding-bottom: 45px;
+    @include respond-to('xs') {
+      &-xs { padding-bottom: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-bottom: 45px; }
+    }
+  }
+  @include m('b4') { padding-bottom: 60px; }
+  @include m('b5') { padding-bottom: 75px; }
+  @include m('b6') { padding-bottom: 90px; }
+  @include m('b7') { padding-bottom: 105px; }
+  @include m('b8') { padding-bottom: 120px; }
+  @include m('b9') {
+    padding-bottom: 135px;
+    @include respond-to('xs') {
+      &-xs { padding-bottom: 135px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-bottom: 135px; }
+    }
+  }
+  @include m('b10') {
+    padding-bottom: 150px;
+    @include respond-to('xs') {
+      &-xs { padding-bottom: 150px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-bottom: 150px; }
+    }
+  }
+  @include m('b11') { padding-bottom: 165px; }
+  @include m('b12') { padding-bottom: 180px; }
+  @include m('l1') { padding-#{$left}: 15px; }
+  @include m('l2') { padding-#{$left}: 30px; }
+  @include m('l3') {
+    padding-#{$left}: 45px;
+    @include respond-to('xs') {
+      &-xs { padding-#{$left}: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-#{$left}: 45px; }
+    }
+  }
+  @include m('l4') { padding-#{$left}: 60px; }
+  @include m('l5') { padding-#{$left}: 75px; }
+  @include m('l6') { padding-#{$left}: 90px; }
+  @include m('l7') {
+    padding-#{$left}: 105px;
+    @include respond-to('xs') {
+      &-xs { padding-#{$left}: 105px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-#{$left}: 105px; }
+    }
+  }
+  @include m('r1') { padding-#{$right}: 15px; }
+  @include m('r2') { padding-#{$right}: 30px; }
+  @include m('r3') {
+    padding-#{$right}: 45px;
+    @include respond-to('xs') {
+      &-xs { padding-#{$right}: 45px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-#{$right}: 45px; }
+    }
+  }
+  @include m('r4') { padding-#{$right}: 60px; }
+  @include m('r5') { padding-#{$right}: 75px; }
+  @include m('r6') { padding-#{$right}: 90px; }
+  @include m('r7') {
+    padding-#{$right}: 105px;
+    @include respond-to('xs') {
+      &-xs { padding-#{$right}: 105px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { padding-#{$right}: 105px; }
+    }
+  }
+}
+.lh {
+  @include m('lg') { line-height: $lg-line-height; }
+}
+.center {
+  @include m('vertically') {
+    &:before {
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    &-cols {
+      float: none !important;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+.fz {
+  @include m('md') { font-size: $body-fz; }
+  @include m('75') { font-size: 75%; }
+  @include m('95') { font-size: 95%; }
+}
+.normalize {
+  @include m('btn') {
+    border: none;
+    background: none;
+  }
+  @include m('input') {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0;
+    font-size: $body-fz;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.shift { 
+  @include m('up-half') {
+    transform: translateY(-50%);
+    @include respond-to('xs') {
+      &-xs { transform: translateY(-50%); }
+    }
+    @include respond-to('sm-p') {
+      &-smp { transform: translateY(-50%); }
+    }
+  }
+  @include m('down-half') { transform: translateY(50%); }
+}
+.low-opacity {
+  opacity: $low-opacity;
+}
+.height {
+  @include m('full') {
+    min-height: 100%;
+    height: 100%;
+  }
+  @include m('half') {
+    max-height: 50%;
+    height: 100%;
+  }
+}
+.spacer {
+  @include m('sm') { padding-top: 100px; padding-bottom: 100px; }
+}
+.zero {
+  @include m('bdrd') { border-radius: 0; }
+  @include m('fz') { font-size: 0; }
+  @include m('p') { padding: 0; }
+  @include m('m') { margin: 0; }
+  @include m('pt') { padding-top: 0; }
+  @include m('pr') { padding-right: 0; }
+  @include m('pb') { padding-bottom: 0; }
+  @include m('pl') { padding-left: 0; }
+  @include m('mt') { margin-top: 0; }
+  @include m('mr') { margin-right: 0; }
+  @include m('mb') { margin-bottom: 0; }
+  @include m('ml') { margin-left: 0; }
+}
+.ls {
+  @include m('normal') { letter-spacing: normal; }
+  @include m('sm') { letter-spacing: $sm-letter-spacing; }
+  @include m('lg') { letter-spacing: $lg-letter-spacing; }
+}
+.display {
+  @include m('ib') { display: inline-block; }
+  @include m('b') { display: block; }
+  @include m('i') { display: inline; }
+}
+.z-index {
+  @include m('primary') { z-index: 100; }
+  @include m('primary-plus') { z-index: 101; }
+  @include m('secondary') { z-index: 50; }
+  @include m('secondary-plus') { z-index: 51; }
+  @include m('tertiary') { z-index: 1; }
+  @include m('tertiary-plus') { z-index: 2; }
+}
+.position {
+  @include m('r') { position: relative; }
+  @include m('a') {
+    position: absolute;
+    @include respond-to('xs') { &-xs { position: absolute; } }
+    @include respond-to('sm-p') { &-smp { position: absolute; } }
+  }
+}
+.min {
+  @include m('bgh') { min-height: 200px; }  
+  @include m('h-80') { min-height: 80px; }  
+  @include m('h-200') { min-height: 200px; }  
+  @include m('h-300') { min-height: 300px; }  
+  @include m('h-400') { min-height: 400px; }  
+  @include m('h-600') { min-height: 600px; }  
+  @include m('h-800') { min-height: 800px; }  
+  @include m('w-100per') {
+    @include if-ltr {
+      min-width: 100%;
+    }
+    @include if-rtl {
+      left: 50px;
+      right: 0;
+    }
+  }
+}
+.max {
+  @include m('tw') {
+    max-width: 360px;
+    @include respond-to('xs') {
+      &-xs { max-width: 360px; }
+    }
+    @include respond-to('sm-p') {
+      &-smp { max-width: 360px; }
+    }
+  }
+  @include m('h-100') { max-height: 100px; }
+  &-w1200 { max-width: 1200px; }
+}
+.bgc {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg {
+  @include m('repeat-y') { background-repeat: repeat-y; }
+}
+.grayscale {
+  filter: grayscale(100%);
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+.no-grayscale {
+  filter: grayscale(0);
+}
+.zoom {
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.transition {
+  @include m('all-f') { transition: all $fast-t; }
+  @include m('all-s') { transition: all $slow-t; }
+}
+.overflow {
+  &-h { overflow: hidden; }
+  @include m('x') { &-hidden { overflow-x: hidden; } }
+}
+.cu {
+  &-p { cursor: pointer; }
+}

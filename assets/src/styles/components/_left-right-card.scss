@@ -1,0 +1,70 @@
+.left-right-card {
+	@extend .clearfix;
+	min-height: 150px;
+	position: relative;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	.left {
+		padding: 30px;
+		background-color: $lighter-grey;
+		.title {
+			color: $red;
+		}
+	}
+	.right {
+		padding: 30px;
+		background-color: $red;
+		.link {
+			text-align: center;
+			display: block;
+		}
+		&:before {
+			content: '';
+			display: block;
+			border: 10px solid $red;
+			position: absolute;
+		}
+	}
+
+	@include respond-to('xs') {
+		.right {
+			position: relative;
+			&:before {
+				border-top: 10px solid $lighter-grey;
+				#{$left}: 50%;
+				top: 0;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	@include respond-to('sm-p') {
+		.left {
+			margin-#{$right}: 170px;
+			.title {
+				color: $red;
+			}
+		}
+		.right {
+			position: absolute;
+			#{$right}: 0;
+			top: 0;
+			min-height: 100%;
+			width: 170px;
+			.link {
+				position: absolute;
+				#{$left}: 0;
+				#{$right}: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:before {
+				#{$left}: 0;
+				top: 50%;
+				border-#{$left}: 10px solid $lighter-grey;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}

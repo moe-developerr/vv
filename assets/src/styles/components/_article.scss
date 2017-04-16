@@ -1,0 +1,9 @@
+.article {
+	margin-bottom: 30px;
+
+	@include respond-to('xs') {
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

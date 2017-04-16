@@ -1,0 +1,137 @@
+.parsley-errors-list {
+	@extend .list-unstyled;
+	text-align: $left;
+	font-size: 12px;
+}
+
+.file-form {
+	.success {
+		display: none;
+	    text-align: center;
+	    margin-top: 15px;
+	    margin-bottom: 15px;
+		&.active { display: block; }
+	}
+}
+
+.vv-input-wrapper {
+	position: relative;
+	height: 50px;
+	@include respond-to('xs') {
+		max-width: 230px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 15px;
+	}
+	@include respond-to('sm-p') {
+		// display: inline-block; 
+		// vertical-align: middle;
+		// margin-#{$right}: 30px;
+	}
+}
+
+.vv-input {
+	@extend .normalize--input;
+	@extend .small;
+	border-bottom: 1px solid;
+	font-style: italic;
+	height: 24px;
+	font-family: $body-ff-thin;
+	margin-#{$right}: 100px;
+	&:focus {
+		& ~ .input--rhombus-2 { #{$right}: 20px; }
+		& ~ .input--rhombus-1 { #{$right}: 35px; }
+	}
+}
+
+.vv-submit {
+	border-radius: 50%;
+	padding: 15px;
+	border: 1px solid;
+	position: relative;
+	margin-top: 8px;
+	transition: all $fast-t;
+	@extend .transparent--bg;
+	@extend .tlc--bd;
+	&:before, &:after { @extend .tlc--bg; }
+	&:hover {
+		box-shadow: 0 0 5px $p-l-c;
+		@extend .tlc--bg;
+		&:before, &:after { @extend .pdc--bg; }
+	}
+	&:before,
+	&:after {
+		content: '';
+		height: 1px;
+		width: 10px;
+		position: absolute;
+		transition: all $fast-t;
+		#{$left}: 10px;
+	}
+	&:before {
+		transform: if-ltr(rotate(45deg), rotate(-45deg));
+		top: 11px;
+	}
+	&:after {
+		transform: if-ltr(rotate(-45deg), rotate(45deg));
+		top: 18px;
+	}
+}
+
+.vv-submit-text {
+	cursor: pointer;
+    margin-#{$right}: 10px;
+    padding-top: 10px;
+    vertical-align: middle;
+}
+
+.vv-file-input {
+	border: 1px solid $gold;
+	position: relative;
+	cursor: pointer;
+	.parsley-errors-list { position: absolute; }
+	@include respond-to('xs') {
+		max-width: 230px;
+		margin-left: auto;
+		margin-right: auto;
+		.left { padding: 8px; }
+	}
+	@include respond-to('sm-p') {
+		// margin-right: 30px;
+		.left { padding: 10px; }
+	}
+	.file {
+		width: 0;
+		height: 0;
+		position: absolute;
+	}
+	.left {
+		margin-#{$right}: 50px;
+		text-align: center;
+	}
+	.right {
+		padding: 10px;
+		position: absolute;
+		#{$right}: 0;
+		top: 0;
+		width: 50px;
+		height: 100%;
+		border-#{$left}: 1px solid $gold;
+		&:before,
+		&:after {
+			content: '';
+			width: 12px;
+			height: 1px;
+			background-color: $gold;
+			position: absolute;
+			#{$left}: 50%;
+			top: 50%;
+		}
+		&:before {
+			transform: if-ltr(rotate(45deg) translate(-2px, 0px), rotate(-45deg) translate(2px, 2px));
+		}
+		&:after {
+			transform: if-ltr(rotate(135deg) translate(6px, 8px), rotate(-135deg) translate(-8px, 8px));
+		}
+	}
+}

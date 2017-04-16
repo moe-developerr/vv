@@ -1,0 +1,445 @@
+.transparent { 
+	@include m('bg') { background-color: transparent; }
+	@include m('bd') { border-color: transparent; }
+	@include m('bdt') { border-top-color: transparent; }
+	@include m('bdr') { border-right-color: transparent; }
+	@include m('bdb') { border-bottom-color: transparent; }
+	@include m('bdl') { border-left-color: transparent; }
+}
+.plc {
+	@include m('c') { color: $p-l-c; }
+	@include m('bg') { background-color: $p-l-c; }
+	@include m('bd') { border-color: $p-l-c; }
+	@include m('bdt') { border-top-color: $p-l-c; }
+	@include m('bdr') { border-right-color: $p-l-c; }
+	@include m('bdb') { border-bottom-color: $p-l-c; }
+	@include m('bdl') { border-left-color: $p-l-c; }
+}
+.slc {
+	@include m('c') { color: $s-l-c; }
+	@include m('bg') { background-color: $s-l-c; }
+	@include m('bd') { border-color: $s-l-c; }
+	@include m('bdt') { border-top-color: $s-l-c; }
+	@include m('bdr') { border-right-color: $s-l-c; }
+	@include m('bdb') { border-bottom-color: $s-l-c; }
+	@include m('bdl') { border-left-color: $s-l-c; }
+}
+.tlc {
+	@include m('c') { color: $t-l-c; }
+	@include m('bg') { background-color: $t-l-c; }
+	@include m('bd') { border-color: $t-l-c; }
+	@include m('bdt') { border-top-color: $t-l-c; }
+	@include m('bdr') { border-right-color: $t-l-c; }
+	@include m('bdb') { border-bottom-color: $t-l-c; }
+	@include m('bdl') { border-left-color: $t-l-c; }
+}
+.pdc {
+	@include m('c') { color: $p-d-c; }
+	@include m('bg') { background-color: $p-d-c; }
+	@include m('bd') { border-color: $p-d-c; }
+	@include m('bdt') { border-top-color: $p-d-c; }
+	@include m('bdr') { border-right-color: $p-d-c; }
+	@include m('bdb') { border-bottom-color: $p-d-c; }
+	@include m('bdl') { border-left-color: $p-d-c; }
+}
+.sdc {
+	@include m('c') { color: $s-d-c; }
+	@include m('bg') { background-color: $s-d-c;	}
+	@include m('bd') { border-color: $s-d-c; }
+	@include m('bdt') { border-top-color: $s-d-c; }
+	@include m('bdr') { border-right-color: $s-d-c; }
+	@include m('bdb') { border-bottom-color: $s-d-c; }
+	@include m('bdl') { border-left-color: $s-d-c; }
+}
+.tdc {
+	@include m('c') { color: $t-d-c; }
+	@include m('bg') { background-color: $t-d-c; }
+	@include m('bg-a') { background-color: rgba($t-d-c, .9); }
+	@include m('bd') { border-color: $t-d-c; }
+	@include m('bdt') { border-top-color: $t-d-c; }
+	@include m('bdr') { border-right-color: $t-d-c; }
+	@include m('bdb') { border-bottom-color: $t-d-c; }
+	@include m('bdl') { border-left-color: $t-d-c; }
+}
+.hover {
+	@include m('plc-c') { &:hover { @extend .plc--c; } }
+	@include m('slc-c') { &:hover { @extend .slc--c; } }
+	@include m('tlc-c') { &:hover { @extend .tlc--c; } }
+	@include m('pdc-c') { &:hover { @extend .pdc--c; } }
+	@include m('sdc-c') { &:hover { @extend .sdc--c; } }
+	@include m('tdc-c') { &:hover { @extend .tdc--c; } }
+}
+.jumbotron { @extend .slc--bg; }
+.link {
+	&.plc {
+		@extend .plc--c;
+		.line { @extend .plc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .plc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .plc--bdt; }
+	}
+	&.slc {
+		@extend .slc--c;
+		.line { @extend .slc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .slc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .slc--bdt; }
+	}
+	&.tlc {
+		@extend .tlc--c;
+		.line { @extend .tlc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .tlc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .tlc--bdt; }
+	}
+	&.pdc {
+		@extend .pdc--c;
+		.line { @extend .pdc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .pdc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .pdc--bdt; }
+	}
+	&.sdc {
+		@extend .sdc--c;
+		.line { @extend .sdc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .sdc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .sdc--bdt; }
+	}
+	&.tdc {
+		@extend .tdc--c;
+		.line { @extend .tdc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .tdc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .tdc--bdt; }
+	}
+}
+.page-title {
+	background-image: linear-gradient(to right, lighten($t-l-c, 15%), darken($t-l-c, 15%), lighten($t-l-c, 15%));
+}
+.hamburger-btn-theme {
+	body.homepage & {
+		.line { @extend .tlc--bg;	}
+		.line:first-child {
+			.rhombus-1:before,
+			.rhombus-2:before { @extend .tlc--bdb; }
+			.rhombus-1:after,
+			.rhombus-2:after { @extend .tlc--bdt; }
+		}
+		.line:first-child + .line + .line {
+			.rhombus-1:before { @extend .tlc--bdb; }
+			.rhombus-1:after { @extend .tlc--bdt; }
+		}
+	}
+	body:not(.homepage) & {
+		.line { @extend .plc--bg;	}
+		.line:first-child {
+			.rhombus-1:before,
+			.rhombus-2:before { @extend .plc--bdb; }
+			.rhombus-1:after,
+			.rhombus-2:after { @extend .plc--bdt; }
+		}
+		.line:first-child + .line + .line {
+			.rhombus-1:before { @extend .plc--bdb; }
+			.rhombus-1:after { @extend .plc--bdt; }
+		}
+	}
+}
+.close-btn-theme {
+	.line { @extend .tlc--bg;	}
+	.line:first-of-type {
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .tlc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .tlc--bdt; }
+	}
+}
+body { @extend .pdc--c; }
+.header {
+	body.homepage &,
+	body.homepage &-placeholder { @extend .slc--bg; }
+	body:not(.homepage) &,
+	body:not(.homepage) &-placeholder { @extend .tdc--bg;	}
+}
+.menu {
+	@extend .pdc--bg; 
+	@include e('link') { 
+		@extend .tlc--c;
+		&:hover, &:focus, &.active { @extend .plc--c; }
+	}
+}
+.languages {
+	@include e('link') {
+		@extend .tlc--c;
+		&:hover,
+		&.active,
+		&:focus { 
+			@extend .tlc--c;
+			@extend .tlc--bd;
+		}
+	}
+}
+.booking {
+	@extend .pdc--bg;
+	&__open,
+	&__close { @extend .transparent--bg; }
+	@include e('open-wrapper') { @extend .plc--c; @include respond-to('sm-p') { background-color: $p-d-c; } }
+	@include e('open-text') { &:hover { @extend .tlc--c; } }
+	@include e('close-text') { &:hover { @extend .tlc--c; } }
+	@include e('title') { @extend .slc--c; }
+	@include e('input') { 
+		@extend .plc--c; 
+		@extend .transparent--bg; 
+	}
+	@include e('check') {
+		@extend .transparent--bg;
+		.line { @extend .tlc--bg; }
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .tlc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .tlc--bdt; }
+	}
+	@include e('check-text') { @extend .tlc--c;	}
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover { @extend .plc--c;}
+.sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus { @extend .plc--c; }
+.sbHolder { @extend .transparent--bg; }
+.sbOptions { @extend .sdc--bg; }
+.footer {
+	@extend .pdc--bg; 
+	@extend .plc--c;
+	&__link,
+	&__social-link {
+		@extend .plc--c;
+  }
+  @include e('link') { &:hover, &:focus { @extend .plc--c; } }
+  @include e('social-link') { &:hover, &:focus { @extend .tlc--c; } }
+}
+.newsletter { 
+	@extend .sdc--bg;
+	@extend .plc--c;
+	@include e('input') {
+		@extend .transparent--bg;
+		@extend .tlc--bdb;
+		@extend .slc--c;
+	}
+	@include e('submit') {
+		@extend .transparent--bg;
+		@extend .tlc--bd;
+		&:before, &:after { @extend .tlc--bg; }
+		&:hover {
+			box-shadow: 0 0 5px $p-l-c;
+			@extend .tlc--bg;
+			&:before, &:after { @extend .pdc--bg; }
+		}
+	}
+}
+.input {
+	&--rhombus-1,
+	&--rhombus-2 {
+		&:before { @extend .tlc--bdb; }
+		&:after { @extend .tlc--bdt; }
+	}
+}
+.slider {
+	.rsArrowIcn {
+		@extend .plc--bg;
+		&:before,
+		&:after { @extend .tlc--bg; }
+		&:hover { @extend .plc--bg; }
+	}
+	&, 
+	.rsOverflow, 
+	.rsSlide, 
+	.rsVideoFrameHolder, 
+	.rsThumbs { @extend .plc--bg; }
+}
+.diamond {
+	@include m('arrow') {
+		&:before,
+		&:after { @extend .pdc--bg; }
+	}
+}
+.section {
+	@include m('light') {
+		.text-block,
+		.text-block__link {
+			@extend .pdc--c;
+		}
+		.line { @extend .pdc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .pdc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .pdc--bdt; }
+	}
+	@include m('dark') {
+		.text-block,
+		.text-block__link {
+			@extend .plc--c;
+		}
+		.line { @extend .plc--bg;	}
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .plc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .plc--bdt; }
+	}
+}
+.image-to-text,
+.text-to-image {
+	.line { @extend .tlc--bg; }
+	@include e('text-block') {
+		@extend .pdc--bg;
+		@extend .plc--c;
+		&:after {
+			@extend .transparent--bd;
+			@include respond-to('xs') { border-top-color: $p-d-c; }
+		}
+	}
+	@include e('overlay') { @extend .plc--bg;	}
+	&:hover {
+		.image-to-text__text-block,
+		.text-to-image__text-block { @extend .tdc--bg; }	
+		.line { @extend .plc--bg; }
+		@include respond-to('xs') {
+			.image-to-text__text-block,
+			.text-to-image__text-block {
+				&:after {
+					border-top-color: $t-d-c;
+				}
+			}
+		}
+	}
+}
+.image-to-text {
+	@include e('text-block') {
+		@include respond-to('sm-p') {
+			&:after {
+				@include if-ltr { border-right-color: $p-d-c; }
+				@include if-rtl { border-left-color: $p-d-c; }
+			}
+		}
+	}
+	&:hover {
+		.image-to-text__text-block {
+			@include respond-to('sm-p') {
+				&:after {
+					@include if-ltr { border-right-color: $t-d-c; }
+					@include if-rtl { border-left-color: $t-d-c; }
+				}
+			}
+		}
+	}
+}
+.text-to-image {
+	@include e('text-block') {
+		@include respond-to('sm-p') {
+			&:after {
+				@include if-ltr { border-left-color: $p-d-c; }
+				@include if-rtl { border-right-color: $p-d-c; }
+			}
+		}
+	}
+	&:hover {
+		.text-to-image__text-block {
+			@include respond-to('sm-p') {
+				&:after {
+					@include if-ltr { border-left-color: $t-d-c; }
+					@include if-rtl { border-right-color: $t-d-c; }
+				}
+			}
+		}
+	}
+}
+.grid-section {
+	@include e('social-link') {
+		@extend .tdc--c;
+		&:hover { @extend .pdc--c; }
+	}
+	@include e('separator') { @extend .tdc--bg; }
+	@include e('images-block') { @extend .tdc--bg; }
+	@include e('text-block-wrapper') { @extend .slc--bg; }
+	@include e('title') { @extend .tdc--c; }
+	@include e('text-block') { @extend .pdc--c; }
+}
+.diamond-panel-wrapper {
+	&:nth-of-type(odd) { @extend .tdc--bg-a; }
+}
+.panel {
+	@include m('diamond') {
+		 @extend .transparent--bg;
+		.line { @extend .tlc--bg; }
+		.rhombus-1:before,
+		.rhombus-2:before { @extend .tlc--bdb; }
+		.rhombus-1:after,
+		.rhombus-2:after { @extend .tlc--bdt; }
+		@include e('link') {
+			@extend .tlc--c;
+			&:hover { @extend .tlc--c; }
+			@include respond-to('xs') { border-top-color: darken($p-d-c, 10%); }
+			@include respond-to('sm-p') { border-left-color: darken($p-d-c, 10%); }
+		}
+	}
+}
+.xdsoft_datetimepicker {
+	.xdsoft_calendar {
+		td.xdsoft_current {
+			background-color: $p-l-c;
+			color: $s-l-c;
+			box-shadow: none;
+		}
+		td:hover,
+		td.xdsoft_current.xdsoft_disabled:hover {
+			background-color: $p-l-c !important;
+			box-shadow: none !important;
+		}
+	  td.xdsoft_today {
+			color: $p-l-c;
+		}
+		td.xdsoft_current.xdsoft_today {
+			color: $s-l-c;
+		}
+	}
+
+	.xdsoft_label>.xdsoft_select>div>.xdsoft_option.xdsoft_current {
+		background-color: $p-l-c;
+		box-shadow: none;
+	}
+	.xdsoft_label>.xdsoft_select>div>.xdsoft_option:hover {
+		background-color: $p-l-c !important;
+	}
+}
+.arrow {
+	&:before,
+	&:after { @extend .tdc--bg; }
+}
+.tab {
+	@extend .tlc--bg;
+	@extend .plc--c;
+	&:hover, &:focus {
+		@extend .sdc--bg;
+		@extend .plc--c;
+	}
+	&-wrapper {
+		&.active .tab {
+			@extend .sdc--bg;
+			@extend .plc--c;
+		}
+	}
+}
+.overlay {
+	@include m(plc) {
+		background-color: rgba($p-l-c, $low-opacity);
+	}
+}
+.list {
+	@include m('tdc') {
+		li:before,
+		li:after { @extend .tdc--bg; }
+	}
+}
